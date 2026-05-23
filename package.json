@@ -23,7 +23,11 @@
   },
   "files": [
     "dist",
-    "skills"
+    "skills",
+    "src",
+    "tsconfig.json",
+    "tsconfig.build.json",
+    "rolldown.config.ts"
   ],
   "scripts": {
     "check": "biome check .",
