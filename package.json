@@ -38,7 +38,7 @@
     "build": "pnpm build:js && pnpm build:types",
     "changeset": "changeset",
     "prepack": "pnpm build",
-    "prepare": "husky install"
+    "prepare": "[ -d .git ] && husky || true"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs,json}": [
