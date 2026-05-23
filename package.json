@@ -33,12 +33,12 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "build:js": "rolldown -c",
-    "build:types": "tsc -p tsconfig.build.json",
-    "build": "pnpm build:js && pnpm build:types",
+    "build:js": "npx rolldown -c",
+    "build:types": "npx tsc -p tsconfig.build.json",
+    "build": "npm run build:js && npm run build:types",
     "changeset": "changeset",
     "prepack": "pnpm build",
-    "prepare": "[ -d .git ] && husky || true"
+    "prepare": "([ -d .git ] && husky || true) && npm run build"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,mjs,cjs,json}": [
